@@ -2,10 +2,25 @@
 
 namespace Persistence.Migrations
 {
-    public partial class seedValues : Migration
+    public partial class FeedVal2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DeleteData(
+                table: "Values",
+                keyColumn: "Id",
+                keyValue: 1);
+
+            migrationBuilder.DeleteData(
+                table: "Values",
+                keyColumn: "Id",
+                keyValue: 2);
+
+            migrationBuilder.DeleteData(
+                table: "Values",
+                keyColumn: "Id",
+                keyValue: 3);
+
             migrationBuilder.InsertData(
                 table: "Values",
                 columns: new[] { "Id", "Name" },
@@ -27,17 +42,32 @@ namespace Persistence.Migrations
             migrationBuilder.DeleteData(
                 table: "Values",
                 keyColumn: "Id",
-                keyValue: 1);
+                keyValue: 4);
 
             migrationBuilder.DeleteData(
                 table: "Values",
                 keyColumn: "Id",
-                keyValue: 2);
+                keyValue: 5);
 
             migrationBuilder.DeleteData(
                 table: "Values",
                 keyColumn: "Id",
-                keyValue: 3);
+                keyValue: 6);
+
+            migrationBuilder.InsertData(
+                table: "Values",
+                columns: new[] { "Id", "Name" },
+                values: new object[] { 1, "Name 101" });
+
+            migrationBuilder.InsertData(
+                table: "Values",
+                columns: new[] { "Id", "Name" },
+                values: new object[] { 2, "Name 102" });
+
+            migrationBuilder.InsertData(
+                table: "Values",
+                columns: new[] { "Id", "Name" },
+                values: new object[] { 3, "Name 103" });
         }
     }
 }
